@@ -51,7 +51,7 @@
             <extension>
                 <groupId>org.springframework.build.aws</groupId>
                 <artifactId>org.springframework.build.aws.maven</artifactId>
-                <version>3.0.0.RELEASE</version>
+                <version>${springframework.build.aws.version}</version>
             </extension>
         </extensions>
     </build>
@@ -60,6 +60,7 @@
     <properties>
         <jedis.version>2.1.0</jedis.version>
         <maven.bundle.plugin.version>2.3.7</maven.bundle.plugin.version>
+        <springframework.build.aws.version>3.0.0.RELEASE</springframework.build.aws.version>
     </properties>
 
 </project>
