@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.ninedemons.osgi.jedis</groupId>
+        <artifactId>jedis-osgi</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>redis.clients</groupId>
+    <artifactId>com.ninedemons.jedis</artifactId>
+    <packaging>bundle</packaging>
+    <name>Jedis OSGi Bundle</name>
+    <version>2.1.0-SNAPSHOT</version>
+    <description>
+        This bundle provides the Jedis Redis client library.
+    </description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Embed-Dependency>jedis</Embed-Dependency>
+                        <_exportcontents>
+                            redis.clients.jedis; version="${jedis.version}",
+                            redis.clients.util;version="${jedis.version}"
+                        </_exportcontents>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Version>${project.version}</Bundle-Version>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+
+</project>
