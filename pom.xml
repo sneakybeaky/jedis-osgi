@@ -11,6 +11,7 @@
     <modules>
         <module>jedis-bundle</module>
         <module>jedis-poolsource</module>
+        <module>example-datasource</module>
     </modules>
 
     <distributionManagement>
