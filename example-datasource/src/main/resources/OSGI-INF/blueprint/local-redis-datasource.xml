@@ -25,7 +25,7 @@
 
     <service ref="poolSource" interface="com.ninedemons.osgi.jedis.JedisPoolSource">
         <service-properties>
-            <entry key="osgi.jndi.service.name" value="jedis-pool/localhost"/>
+            <entry key="osgi.jndi.service.name" value="jedis-pool/leaderboard"/>
         </service-properties>
     </service>
 
