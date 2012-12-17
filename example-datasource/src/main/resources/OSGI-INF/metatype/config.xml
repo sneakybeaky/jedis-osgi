@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0">
+
+    <OCD description="Example Redis datasource" name="Example Redis datasource" id="com.ninedemons.osgi.jedis.ds.ExampleDatasource">
+        <AD name="Redis server host name" id="hostName" required="true" type="String" default="localhost" description="Name (or IP address) of Redis server"/>
+        <AD name="Redis server port" id="port" required="true" type="Integer" default="6379" description="Port Redis server is listening on"/>
+        <AD name="JNDI suffix" id="jndiName" required="true" type="String" default="leaderboard" description="JNDI suffix for this data source"/>
+    </OCD>
+    <Designate pid="com.ninedemons.osgi.jedis.ds.ExampleDatasource">
+        <Object ocdref="com.ninedemons.osgi.jedis.ds.ExampleDatasource"/>
+    </Designate>
+</metatype:MetaData>

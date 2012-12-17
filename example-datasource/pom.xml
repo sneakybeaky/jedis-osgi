@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>bundle</packaging>
-    <name>Example Redis datasource</name>
+    <name>Example Redis datasource for leaderboards</name>
     <description>Expects a Redis server running on localhost port 6379</description>
 
 
